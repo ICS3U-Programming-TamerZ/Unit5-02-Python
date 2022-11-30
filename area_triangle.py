@@ -30,6 +30,7 @@ def main():
     except ValueError:
         # exception thrown if user inputs a string
         print("Please enter a number")
+        main()
     else:
         # arguments getting passed as parameters
         calc_area(base_from_user, height_from_user)
