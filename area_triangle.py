@@ -22,7 +22,9 @@ def main():
         # tries casting base and height as a float
         base_from_user = float(base_from_user)
         height_from_user = float(height_from_user)
- 
+        if base_from_user or height_from_user < 0:
+                print("Please enter a number above 0")
+                main()
     except ValueError:
         # exception thrown if user inputs a string
         print("Please enter a number")
