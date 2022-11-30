@@ -18,6 +18,10 @@ def main():
     base_from_user = input("Please Enter the Base of the triangle: ")
     height_from_user = input("Please Enter the Height of the triangle: ")
 
+    if base_from_user or height_from_user <= 0:
+        print("YOU MUST ENTER A NUMBER ABOVE 0")
+        main()
+
     try:
         # tries casting base and height as a float
         base_from_user = float(base_from_user)
